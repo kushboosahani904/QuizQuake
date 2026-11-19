@@ -1,0 +1,902 @@
+[
+ {
+  "id": "q001",
+  "topic": "Data Structures",
+  "subtopic": "Arrays & Linked Lists",
+  "difficulty": "Easy",
+  "text": "What is the time complexity of accessing the i-th element of an array by index?",
+  "options": [
+   "O(log n)",
+   "O(n)",
+   "O(n²)",
+   "O(1)"
+  ],
+  "answer": 3,
+  "explanation": "Arrays are contiguous, so the address is computed directly as base + i × element size."
+ },
+ {
+  "id": "q002",
+  "topic": "Data Structures",
+  "subtopic": "Arrays & Linked Lists",
+  "difficulty": "Medium",
+  "text": "Which technique detects a cycle in a singly linked list using O(1) extra space?",
+  "options": [
+   "Sorting nodes by address",
+   "Recursion with a stack",
+   "Floyd's tortoise-and-hare (two pointers)",
+   "Hashing every node"
+  ],
+  "answer": 2,
+  "explanation": "A slow and a fast pointer must meet inside the cycle if one exists; no extra memory is needed."
+ },
+ {
+  "id": "q003",
+  "topic": "Data Structures",
+  "subtopic": "Arrays & Linked Lists",
+  "difficulty": "Hard",
+  "text": "A dynamic array grows its capacity by a fixed 10 slots (instead of doubling) when full. What is the total cost of n appends?",
+  "options": [
+   "O(n)",
+   "O(1)",
+   "O(n log n)",
+   "O(n²)"
+  ],
+  "answer": 3,
+  "explanation": "Each resize copies all current elements; with ~n/10 resizes the copying sums to Θ(n²). Doubling is what gives amortized O(1)."
+ },
+ {
+  "id": "q004",
+  "topic": "Data Structures",
+  "subtopic": "Stacks & Queues",
+  "difficulty": "Easy",
+  "text": "Which data structure follows the Last-In-First-Out (LIFO) principle?",
+  "options": [
+   "Queue",
+   "Linked list",
+   "Stack",
+   "Binary tree"
+  ],
+  "answer": 2,
+  "explanation": "A stack removes the most recently inserted element first."
+ },
+ {
+  "id": "q005",
+  "topic": "Data Structures",
+  "subtopic": "Stacks & Queues",
+  "difficulty": "Medium",
+  "text": "What is the value of the postfix expression 2 3 1 * + 9 - ?",
+  "options": [
+   "4",
+   "-2",
+   "0",
+   "-4"
+  ],
+  "answer": 3,
+  "explanation": "3*1=3; 2+3=5; 5-9=-4."
+ },
+ {
+  "id": "q006",
+  "topic": "Data Structures",
+  "subtopic": "Stacks & Queues",
+  "difficulty": "Hard",
+  "text": "A queue is built from two stacks (enqueue pushes onto stack 1; dequeue pops from stack 2, refilling it from stack 1 when empty). What is the amortized cost per dequeue?",
+  "options": [
+   "O(n)",
+   "O(n²)",
+   "O(log n)",
+   "O(1)"
+  ],
+  "answer": 3,
+  "explanation": "Each element is moved between stacks at most once, so n operations cost O(n) in total."
+ },
+ {
+  "id": "q007",
+  "topic": "Data Structures",
+  "subtopic": "Trees",
+  "difficulty": "Easy",
+  "text": "What is the maximum number of nodes in a binary tree of height h (a single root has height 0)?",
+  "options": [
+   "h²",
+   "2^h",
+   "2^(h+1) − 1",
+   "2h + 1"
+  ],
+  "answer": 2,
+  "explanation": "Level i holds at most 2^i nodes; summing levels 0..h gives 2^(h+1) − 1."
+ },
+ {
+  "id": "q008",
+  "topic": "Data Structures",
+  "subtopic": "Trees",
+  "difficulty": "Medium",
+  "text": "Which traversal of a binary search tree visits keys in ascending order?",
+  "options": [
+   "Preorder",
+   "Level-order",
+   "Inorder",
+   "Postorder"
+  ],
+  "answer": 2,
+  "explanation": "Inorder visits left subtree, node, right subtree, which matches the BST ordering property."
+ },
+ {
+  "id": "q009",
+  "topic": "Data Structures",
+  "subtopic": "Trees",
+  "difficulty": "Hard",
+  "text": "How many structurally distinct binary search trees can be built from 4 distinct keys?",
+  "options": [
+   "14",
+   "16",
+   "12",
+   "24"
+  ],
+  "answer": 0,
+  "explanation": "The count is the 4th Catalan number: C4 = (1/5)·C(8,4) = 14."
+ },
+ {
+  "id": "q010",
+  "topic": "Data Structures",
+  "subtopic": "Hashing",
+  "difficulty": "Easy",
+  "text": "What does a hash function do in a hash table?",
+  "options": [
+   "Encrypts the keys",
+   "Compresses the values",
+   "Maps a key to a table index",
+   "Sorts the keys"
+  ],
+  "answer": 2,
+  "explanation": "It converts a key into a bucket index so lookups can jump straight to the right slot."
+ },
+ {
+  "id": "q011",
+  "topic": "Data Structures",
+  "subtopic": "Hashing",
+  "difficulty": "Medium",
+  "text": "In separate chaining, how are keys that hash to the same slot stored?",
+  "options": [
+   "In a second table only",
+   "In the next empty slot",
+   "They overwrite each other",
+   "In a linked list (or similar collection) at that slot"
+  ],
+  "answer": 3,
+  "explanation": "Each bucket holds a chain of all entries that collided there. Using the next empty slot is open addressing."
+ },
+ {
+  "id": "q012",
+  "topic": "Data Structures",
+  "subtopic": "Hashing",
+  "difficulty": "Hard",
+  "text": "In a chained hash table with load factor α and simple uniform hashing, the expected cost of an unsuccessful search is:",
+  "options": [
+   "Θ(α²)",
+   "Θ(n)",
+   "Θ(log n)",
+   "Θ(1 + α)"
+  ],
+  "answer": 3,
+  "explanation": "One step to compute the hash plus scanning an average chain of length α."
+ },
+ {
+  "id": "q013",
+  "topic": "Data Structures",
+  "subtopic": "Graphs",
+  "difficulty": "Easy",
+  "text": "Which data structure does Breadth-First Search use to hold its frontier?",
+  "options": [
+   "Binary tree",
+   "Stack",
+   "Queue",
+   "Heap"
+  ],
+  "answer": 2,
+  "explanation": "FIFO order processes vertices level by level."
+ },
+ {
+  "id": "q014",
+  "topic": "Data Structures",
+  "subtopic": "Graphs",
+  "difficulty": "Medium",
+  "text": "A topological ordering of a directed graph exists if and only if the graph is:",
+  "options": [
+   "Undirected",
+   "Complete",
+   "Strongly connected",
+   "A DAG (no directed cycles)"
+  ],
+  "answer": 3,
+  "explanation": "A cycle makes it impossible to place every vertex before its successors."
+ },
+ {
+  "id": "q015",
+  "topic": "Data Structures",
+  "subtopic": "Graphs",
+  "difficulty": "Hard",
+  "text": "What is the running time of Dijkstra's algorithm using a binary heap and adjacency lists?",
+  "options": [
+   "O((V + E) log V)",
+   "O(V²)",
+   "O(V + E)",
+   "O(VE)"
+  ],
+  "answer": 0,
+  "explanation": "Each edge relaxation may cost an O(log V) heap update."
+ },
+ {
+  "id": "q016",
+  "topic": "Algorithms",
+  "subtopic": "Sorting",
+  "difficulty": "Easy",
+  "text": "What is the worst-case time complexity of bubble sort?",
+  "options": [
+   "O(log n)",
+   "O(n²)",
+   "O(n)",
+   "O(n log n)"
+  ],
+  "answer": 1,
+  "explanation": "Two nested passes over the data give quadratic comparisons in the worst case."
+ },
+ {
+  "id": "q017",
+  "topic": "Algorithms",
+  "subtopic": "Sorting",
+  "difficulty": "Medium",
+  "text": "Which of these sorting algorithms is stable in its standard implementation?",
+  "options": [
+   "Quick sort",
+   "Selection sort",
+   "Heap sort",
+   "Merge sort"
+  ],
+  "answer": 3,
+  "explanation": "Merge sort preserves the order of equal keys when merging takes from the left half on ties."
+ },
+ {
+  "id": "q018",
+  "topic": "Algorithms",
+  "subtopic": "Sorting",
+  "difficulty": "Hard",
+  "text": "Any comparison-based sorting algorithm needs at least how many comparisons in the worst case?",
+  "options": [
+   "Ω(n)",
+   "Ω(log n)",
+   "Ω(n log n)",
+   "Ω(n²)"
+  ],
+  "answer": 2,
+  "explanation": "A decision tree needs n! leaves, so its height is at least log₂(n!) = Ω(n log n)."
+ },
+ {
+  "id": "q019",
+  "topic": "Algorithms",
+  "subtopic": "Searching",
+  "difficulty": "Easy",
+  "text": "Binary search requires the input to be:",
+  "options": [
+   "Stored in a linked list",
+   "Of even length",
+   "Unique",
+   "Sorted"
+  ],
+  "answer": 3,
+  "explanation": "Halving the range only works if order tells you which half to discard."
+ },
+ {
+  "id": "q020",
+  "topic": "Algorithms",
+  "subtopic": "Searching",
+  "difficulty": "Medium",
+  "text": "At most how many comparisons does binary search need on a sorted array of 1024 elements (worst case)?",
+  "options": [
+   "11",
+   "10",
+   "9",
+   "1024"
+  ],
+  "answer": 0,
+  "explanation": "floor(log₂ 1024) + 1 = 11."
+ },
+ {
+  "id": "q021",
+  "topic": "Algorithms",
+  "subtopic": "Searching",
+  "difficulty": "Hard",
+  "text": "Searching for a key in a rotated sorted array of distinct elements (e.g., 4 5 6 7 0 1 2) can be done in:",
+  "options": [
+   "O(log n)",
+   "O(n log n)",
+   "O(1)",
+   "O(n) only"
+  ],
+  "answer": 0,
+  "explanation": "At each step one half is still sorted; check whether the key lies in it and discard the other half."
+ },
+ {
+  "id": "q022",
+  "topic": "Algorithms",
+  "subtopic": "Dynamic Programming",
+  "difficulty": "Easy",
+  "text": "Dynamic programming is applicable when a problem has:",
+  "options": [
+   "Overlapping subproblems and optimal substructure",
+   "No recursive structure",
+   "Only a greedy choice property",
+   "Only independent subproblems"
+  ],
+  "answer": 0,
+  "explanation": "DP caches repeated subproblems and builds the optimum from optimal sub-solutions."
+ },
+ {
+  "id": "q023",
+  "topic": "Algorithms",
+  "subtopic": "Dynamic Programming",
+  "difficulty": "Medium",
+  "text": "What is the time complexity of the standard DP solution for Longest Common Subsequence of strings of lengths m and n?",
+  "options": [
+   "O(m + n)",
+   "O(m·log n)",
+   "O(2^(m+n))",
+   "O(m·n)"
+  ],
+  "answer": 3,
+  "explanation": "The table has (m+1)(n+1) cells, each filled in O(1)."
+ },
+ {
+  "id": "q024",
+  "topic": "Algorithms",
+  "subtopic": "Dynamic Programming",
+  "difficulty": "Hard",
+  "text": "The 0/1 knapsack DP runs in O(n·W), where W is the capacity. This running time is called:",
+  "options": [
+   "Logarithmic",
+   "Linear in the bit-length of W",
+   "Pseudo-polynomial",
+   "Strictly polynomial in the input size"
+  ],
+  "answer": 2,
+  "explanation": "W is a number; its input size is log W bits, so n·W is exponential in the bit-length of W."
+ },
+ {
+  "id": "q025",
+  "topic": "Algorithms",
+  "subtopic": "Greedy",
+  "difficulty": "Easy",
+  "text": "A greedy algorithm builds a solution by:",
+  "options": [
+   "Storing all subproblem results",
+   "Making the locally best choice at each step",
+   "Trying all possible solutions",
+   "Dividing the input in halves and merging"
+  ],
+  "answer": 1,
+  "explanation": "It never reconsiders earlier choices."
+ },
+ {
+  "id": "q026",
+  "topic": "Algorithms",
+  "subtopic": "Greedy",
+  "difficulty": "Medium",
+  "text": "In Huffman coding, which two nodes are merged at each step?",
+  "options": [
+   "The two with the highest frequencies",
+   "The first and last nodes in the list",
+   "The two nodes with the lowest frequencies",
+   "Two random nodes"
+  ],
+  "answer": 2,
+  "explanation": "Merging the rarest symbols first pushes them deepest in the tree, giving them the longest codes."
+ },
+ {
+  "id": "q027",
+  "topic": "Algorithms",
+  "subtopic": "Greedy",
+  "difficulty": "Hard",
+  "text": "Which of these problems is NOT solved optimally by a simple greedy algorithm?",
+  "options": [
+   "Huffman coding",
+   "Activity selection",
+   "Fractional knapsack",
+   "0/1 knapsack"
+  ],
+  "answer": 3,
+  "explanation": "Picking by value/weight ratio fails for indivisible items; 0/1 knapsack needs DP."
+ },
+ {
+  "id": "q028",
+  "topic": "Algorithms",
+  "subtopic": "Complexity Analysis",
+  "difficulty": "Easy",
+  "text": "An algorithm with O(1) running time takes:",
+  "options": [
+   "Time proportional to n",
+   "Time that doubles with each added input",
+   "Constant time regardless of input size",
+   "Time proportional to log n"
+  ],
+  "answer": 2,
+  "explanation": "O(1) means the running time is bounded by a constant."
+ },
+ {
+  "id": "q029",
+  "topic": "Algorithms",
+  "subtopic": "Complexity Analysis",
+  "difficulty": "Medium",
+  "text": "Using the Master theorem, T(n) = 2T(n/2) + n solves to:",
+  "options": [
+   "Θ(log n)",
+   "Θ(n)",
+   "Θ(n log n)",
+   "Θ(n²)"
+  ],
+  "answer": 2,
+  "explanation": "a=2, b=2, f(n)=n=Θ(n^(log_b a)), so case 2 gives Θ(n log n)."
+ },
+ {
+  "id": "q030",
+  "topic": "Algorithms",
+  "subtopic": "Complexity Analysis",
+  "difficulty": "Hard",
+  "text": "T(n) = 3T(n/2) + n solves to:",
+  "options": [
+   "Θ(n^(log₂3))",
+   "Θ(n log n)",
+   "Θ(n²)",
+   "Θ(n)"
+  ],
+  "answer": 0,
+  "explanation": "log₂3 ≈ 1.585 > 1, so the leaf cost dominates (Master theorem case 1)."
+ },
+ {
+  "id": "q031",
+  "topic": "Operating Systems",
+  "subtopic": "Process Scheduling",
+  "difficulty": "Easy",
+  "text": "Which scheduling algorithm is non-preemptive by nature?",
+  "options": [
+   "Shortest Remaining Time First",
+   "First-Come First-Served (FCFS)",
+   "Preemptive priority",
+   "Round Robin"
+  ],
+  "answer": 1,
+  "explanation": "FCFS lets each process run to completion once dispatched."
+ },
+ {
+  "id": "q032",
+  "topic": "Operating Systems",
+  "subtopic": "Process Scheduling",
+  "difficulty": "Medium",
+  "text": "The convoy effect (short processes waiting behind a long one) is most associated with:",
+  "options": [
+   "FCFS",
+   "SRTF",
+   "Multilevel feedback queue",
+   "Round Robin"
+  ],
+  "answer": 0,
+  "explanation": "One long CPU-bound process at the head delays everything behind it."
+ },
+ {
+  "id": "q033",
+  "topic": "Operating Systems",
+  "subtopic": "Process Scheduling",
+  "difficulty": "Hard",
+  "text": "Four processes arrive at t=0 with burst times 6, 8, 7 and 3 ms. What is the average waiting time under non-preemptive SJF?",
+  "options": [
+   "7 ms",
+   "10.25 ms",
+   "8 ms",
+   "6.5 ms"
+  ],
+  "answer": 0,
+  "explanation": "Order 3, 6, 7, 8 → waits 0, 3, 9, 16 → 28/4 = 7 ms (FCFS would give 10.25 ms)."
+ },
+ {
+  "id": "q034",
+  "topic": "Operating Systems",
+  "subtopic": "Synchronization",
+  "difficulty": "Easy",
+  "text": "What is a critical section?",
+  "options": [
+   "A section that runs at the highest priority",
+   "The kernel's interrupt handler",
+   "Code that accesses shared resources and must not run in more than one process at a time",
+   "Code stored in ROM"
+  ],
+  "answer": 2,
+  "explanation": "Mutual exclusion on this code prevents race conditions."
+ },
+ {
+  "id": "q035",
+  "topic": "Operating Systems",
+  "subtopic": "Synchronization",
+  "difficulty": "Medium",
+  "text": "A counting semaphore is initialized to 3 and 5 processes each call wait() with no signal() calls. How many processes are blocked?",
+  "options": [
+   "3",
+   "5",
+   "2",
+   "0"
+  ],
+  "answer": 2,
+  "explanation": "The first three wait() calls succeed (3→0); the remaining two block."
+ },
+ {
+  "id": "q036",
+  "topic": "Operating Systems",
+  "subtopic": "Synchronization",
+  "difficulty": "Hard",
+  "text": "Peterson's solution for two processes satisfies which requirements?",
+  "options": [
+   "Only mutual exclusion",
+   "Mutual exclusion and progress only",
+   "Progress and bounded waiting only",
+   "Mutual exclusion, progress and bounded waiting"
+  ],
+  "answer": 3,
+  "explanation": "Using flag[] and turn, it meets all three classical critical-section requirements."
+ },
+ {
+  "id": "q037",
+  "topic": "Operating Systems",
+  "subtopic": "Deadlocks",
+  "difficulty": "Easy",
+  "text": "Which of these is NOT a necessary condition for deadlock?",
+  "options": [
+   "Mutual exclusion",
+   "Preemption of resources",
+   "Hold and wait",
+   "Circular wait"
+  ],
+  "answer": 1,
+  "explanation": "The Coffman conditions require NO preemption; allowing preemption breaks deadlock."
+ },
+ {
+  "id": "q038",
+  "topic": "Operating Systems",
+  "subtopic": "Deadlocks",
+  "difficulty": "Medium",
+  "text": "The Banker's algorithm is used for:",
+  "options": [
+   "Deadlock avoidance",
+   "CPU scheduling",
+   "Deadlock detection only",
+   "Page replacement"
+  ],
+  "answer": 0,
+  "explanation": "It grants a request only if the resulting state remains safe."
+ },
+ {
+  "id": "q039",
+  "topic": "Operating Systems",
+  "subtopic": "Deadlocks",
+  "difficulty": "Hard",
+  "text": "A system has 12 tape drives. P0 holds 5 (max 10), P1 holds 2 (max 4), P2 holds 2 (max 9). Is the state safe?",
+  "options": [
+   "Safe, with safe sequence ⟨P0, P1, P2⟩",
+   "Safe, with safe sequence ⟨P1, P0, P2⟩",
+   "Already deadlocked",
+   "Unsafe, but not yet deadlocked"
+  ],
+  "answer": 1,
+  "explanation": "Available = 3. P1 needs 2 → finishes, available 5. P0 needs 5 → finishes, available 10. P2 needs 7 → fits."
+ },
+ {
+  "id": "q040",
+  "topic": "Operating Systems",
+  "subtopic": "Memory Management",
+  "difficulty": "Easy",
+  "text": "Paging eliminates which kind of fragmentation?",
+  "options": [
+   "Neither",
+   "Internal fragmentation",
+   "Both internal and external",
+   "External fragmentation"
+  ],
+  "answer": 3,
+  "explanation": "Fixed-size frames mean any free frame fits any page; only the last page may waste space internally."
+ },
+ {
+  "id": "q041",
+  "topic": "Operating Systems",
+  "subtopic": "Memory Management",
+  "difficulty": "Medium",
+  "text": "A 16-bit logical address space uses 1 KB pages. How many bits form the page number?",
+  "options": [
+   "4",
+   "10",
+   "6",
+   "8"
+  ],
+  "answer": 2,
+  "explanation": "1 KB = 2^10 → 10 offset bits; 16 − 10 = 6 page-number bits."
+ },
+ {
+  "id": "q042",
+  "topic": "Operating Systems",
+  "subtopic": "Memory Management",
+  "difficulty": "Hard",
+  "text": "TLB lookup takes 20 ns, memory access 100 ns, TLB hit ratio is 80%. What is the effective access time?",
+  "options": [
+   "160 ns",
+   "120 ns",
+   "140 ns",
+   "100 ns"
+  ],
+  "answer": 2,
+  "explanation": "0.8 × (20+100) + 0.2 × (20+100+100) = 96 + 44 = 140 ns."
+ },
+ {
+  "id": "q043",
+  "topic": "Operating Systems",
+  "subtopic": "Virtual Memory",
+  "difficulty": "Easy",
+  "text": "A page fault occurs when:",
+  "options": [
+   "Two processes share a page",
+   "The CPU divides by zero",
+   "A TLB entry is evicted",
+   "The referenced page is not in main memory"
+  ],
+  "answer": 3,
+  "explanation": "The OS must load the page from disk."
+ },
+ {
+  "id": "q044",
+  "topic": "Operating Systems",
+  "subtopic": "Virtual Memory",
+  "difficulty": "Medium",
+  "text": "Belady's anomaly (more frames causing more page faults) can occur with:",
+  "options": [
+   "Both LRU and Optimal",
+   "FIFO page replacement",
+   "Optimal replacement",
+   "LRU"
+  ],
+  "answer": 1,
+  "explanation": "LRU and Optimal are stack algorithms and are immune; FIFO is not."
+ },
+ {
+  "id": "q045",
+  "topic": "Operating Systems",
+  "subtopic": "Virtual Memory",
+  "difficulty": "Hard",
+  "text": "How many page faults occur for reference string 1 2 3 4 1 2 5 1 2 3 4 5 with 3 frames under FIFO?",
+  "options": [
+   "10",
+   "9",
+   "7",
+   "8"
+  ],
+  "answer": 1,
+  "explanation": "Faults on 1,2,3,4,1,2,5,3,4 = 9. With 4 frames the same string gives 10 (Belady's anomaly)."
+ },
+ {
+  "id": "q046",
+  "topic": "Networks",
+  "subtopic": "OSI & TCP/IP",
+  "difficulty": "Easy",
+  "text": "Which OSI layer is responsible for routing packets between networks?",
+  "options": [
+   "Transport layer",
+   "Network layer",
+   "Session layer",
+   "Data link layer"
+  ],
+  "answer": 1,
+  "explanation": "The network layer handles logical addressing and path selection."
+ },
+ {
+  "id": "q047",
+  "topic": "Networks",
+  "subtopic": "OSI & TCP/IP",
+  "difficulty": "Medium",
+  "text": "Which layer provides process-to-process delivery using port numbers?",
+  "options": [
+   "Application layer",
+   "Network layer",
+   "Data link layer",
+   "Transport layer"
+  ],
+  "answer": 3,
+  "explanation": "TCP and UDP use ports to deliver data to the right application."
+ },
+ {
+  "id": "q048",
+  "topic": "Networks",
+  "subtopic": "OSI & TCP/IP",
+  "difficulty": "Hard",
+  "text": "In TCP/IP encapsulation, what are the PDU names at the transport, network and data link layers respectively?",
+  "options": [
+   "Packet, segment, frame",
+   "Frame, packet, segment",
+   "Segment, packet, frame",
+   "Datagram, frame, bit"
+  ],
+  "answer": 2,
+  "explanation": "Transport → segment, network → packet, data link → frame."
+ },
+ {
+  "id": "q049",
+  "topic": "Networks",
+  "subtopic": "IP Addressing",
+  "difficulty": "Easy",
+  "text": "How many bits are in an IPv4 address?",
+  "options": [
+   "16",
+   "32",
+   "64",
+   "128"
+  ],
+  "answer": 1,
+  "explanation": "IPv4 addresses are 32 bits (four octets); IPv6 uses 128."
+ },
+ {
+  "id": "q050",
+  "topic": "Networks",
+  "subtopic": "IP Addressing",
+  "difficulty": "Medium",
+  "text": "How many usable host addresses does a /26 IPv4 subnet provide?",
+  "options": [
+   "64",
+   "126",
+   "30",
+   "62"
+  ],
+  "answer": 3,
+  "explanation": "32 − 26 = 6 host bits → 64 addresses, minus network and broadcast = 62."
+ },
+ {
+  "id": "q051",
+  "topic": "Networks",
+  "subtopic": "IP Addressing",
+  "difficulty": "Hard",
+  "text": "192.168.10.0/24 is split into 4 equal subnets. What is the broadcast address of the third subnet?",
+  "options": [
+   "192.168.10.190",
+   "192.168.10.127",
+   "192.168.10.255",
+   "192.168.10.191"
+  ],
+  "answer": 3,
+  "explanation": "Subnets are /26 blocks of 64: .0–.63, .64–.127, .128–.191, .192–.255. The third ends at .191."
+ },
+ {
+  "id": "q052",
+  "topic": "Networks",
+  "subtopic": "Transport Layer",
+  "difficulty": "Easy",
+  "text": "Which transport protocol is connectionless?",
+  "options": [
+   "TCP",
+   "FTP",
+   "HTTP",
+   "UDP"
+  ],
+  "answer": 3,
+  "explanation": "UDP sends datagrams with no handshake or delivery guarantee."
+ },
+ {
+  "id": "q053",
+  "topic": "Networks",
+  "subtopic": "Transport Layer",
+  "difficulty": "Medium",
+  "text": "How is a TCP connection established?",
+  "options": [
+   "Three-way handshake (SYN, SYN-ACK, ACK)",
+   "No handshake is used",
+   "Four-way handshake (FIN, ACK, FIN, ACK)",
+   "Two-way handshake"
+  ],
+  "answer": 0,
+  "explanation": "The three-way handshake synchronizes sequence numbers on both sides. The four-way exchange is for teardown."
+ },
+ {
+  "id": "q054",
+  "topic": "Networks",
+  "subtopic": "Transport Layer",
+  "difficulty": "Hard",
+  "text": "In TCP slow start, cwnd begins at 1 MSS and doubles every RTT; ssthresh = 16 MSS. After how many RTTs does cwnd first reach 16 MSS?",
+  "options": [
+   "4",
+   "8",
+   "5",
+   "16"
+  ],
+  "answer": 0,
+  "explanation": "1 → 2 → 4 → 8 → 16 takes four doublings."
+ },
+ {
+  "id": "q055",
+  "topic": "Networks",
+  "subtopic": "Application Protocols",
+  "difficulty": "Easy",
+  "text": "What is the default port for HTTP?",
+  "options": [
+   "25",
+   "80",
+   "21",
+   "443"
+  ],
+  "answer": 1,
+  "explanation": "HTTPS uses 443, FTP 21, SMTP 25."
+ },
+ {
+  "id": "q056",
+  "topic": "Networks",
+  "subtopic": "Application Protocols",
+  "difficulty": "Medium",
+  "text": "What does DNS do?",
+  "options": [
+   "Translates domain names to IP addresses",
+   "Routes packets between ISPs",
+   "Assigns IP addresses to hosts",
+   "Encrypts web traffic"
+  ],
+  "answer": 0,
+  "explanation": "Assigning addresses is DHCP's job."
+ },
+ {
+  "id": "q057",
+  "topic": "Networks",
+  "subtopic": "Application Protocols",
+  "difficulty": "Hard",
+  "text": "Which HTTP method is idempotent but NOT safe?",
+  "options": [
+   "PUT",
+   "GET",
+   "HEAD",
+   "POST"
+  ],
+  "answer": 0,
+  "explanation": "PUT modifies state, but repeating it has the same effect. GET/HEAD are safe; POST is not idempotent."
+ },
+ {
+  "id": "q058",
+  "topic": "Networks",
+  "subtopic": "Routing",
+  "difficulty": "Easy",
+  "text": "A router decides where to forward a packet mainly using:",
+  "options": [
+   "The source MAC address",
+   "The packet's checksum",
+   "The application payload",
+   "The destination IP address"
+  ],
+  "answer": 3,
+  "explanation": "It matches the destination IP against its routing table."
+ },
+ {
+  "id": "q059",
+  "topic": "Networks",
+  "subtopic": "Routing",
+  "difficulty": "Medium",
+  "text": "OSPF is an example of which type of routing protocol?",
+  "options": [
+   "Path-vector",
+   "Static",
+   "Distance-vector",
+   "Link-state"
+  ],
+  "answer": 3,
+  "explanation": "OSPF floods link-state advertisements and runs Dijkstra on the resulting map."
+ },
+ {
+  "id": "q060",
+  "topic": "Networks",
+  "subtopic": "Routing",
+  "difficulty": "Hard",
+  "text": "Which technique is commonly used to reduce the count-to-infinity problem in distance-vector routing?",
+  "options": [
+   "Using larger MTUs",
+   "Split horizon (with poison reverse)",
+   "Increasing the TTL",
+   "Flooding link-state packets"
+  ],
+  "answer": 1,
+  "explanation": "A router does not advertise a route back out the interface it learned it from."
+ }
+]
